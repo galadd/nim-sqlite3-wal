@@ -1,8 +1,8 @@
 ## This file contains additional definitions that nimterop does not generate
 ## code for
 
-import sqlite3_abi/sqlite3_gen
-export sqlite3_gen
+import sqlite3_abi/wal_gen
+export wal_gen
 
 
 # /*
@@ -19,5 +19,5 @@ export sqlite3_gen
 # ** The typedef is necessary to work around problems in certain
 # ** C++ compilers.
 # */
-const SQLITE_STATIC* = cast[sqlite3_destructor_type](0)
-const SQLITE_TRANSIENT* = cast[sqlite3_destructor_type](-1)
+# const SQLITE_STATIC* = cast[sqlite3_destructor_type](0)
+# const SQLITE_TRANSIENT* = cast[sqlite3_destructor_type](-1)

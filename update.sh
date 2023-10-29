@@ -18,8 +18,8 @@ cd ..
 
 [[ -v HAS_NIMTEROP ]] || nimble install -y nimterop@0.6.13
 
-nim c -o:wrap --verbosity:0 --hints:off ./sqlite3_abi/wrap.nim
-./wrap
+nim c -o:wrap --verbosity:0 --hints:off ./sqlite3_abi/wrap_wal.nim
+./wrap_wal
 
 sed -i \
   -e "s|cdecl|sqlitedecl|g" \

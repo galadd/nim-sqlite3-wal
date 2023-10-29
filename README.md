@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Stability: experimental](https://img.shields.io/badge/stability-experimental-orange.svg)
 
-A low-level Nim wrapper for the [SQLite](https://www.sqlite.org/). Builds and exposes the raw C API of SQLite 3.
+A low-level Nim wrapper for the [SQLite](https://www.sqlite.org/). Builds and exposes the raw C API of SQLite 3. This is a fork of [nim-sqlite3-abi](https://github.com/arnetheduck/nim-sqlite3-abi) that exposes the raw API for the Write-Ahead Log (WAL) implementation
 
 ## Usage
 
