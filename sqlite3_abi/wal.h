@@ -55,6 +55,25 @@
 */
 typedef struct Wal Wal;
 
+typedef struct sqlite3_vfs sqlite3_vfs;
+
+typedef struct sqlite3_file sqlite3_file;
+
+typedef struct sqlite3 sqlite3;
+
+typedef sqlite_int64 i64;          /* 8-byte signed integer */
+typedef sqlite_uint64 u64;         /* 8-byte unsigned integer */
+typedef UINT32_TYPE u32;           /* 4-byte unsigned integer */
+typedef UINT16_TYPE u16;           /* 2-byte unsigned integer */
+typedef INT16_TYPE i16;            /* 2-byte signed integer */
+typedef UINT8_TYPE u8;             /* 1-byte unsigned integer */
+typedef INT8_TYPE i8;              /* 1-byte signed integer */
+
+typedef u32 Pgno;
+typedef struct PgHdr PgHdr;
+
+SQLITE_API sqlite3_vfs *sqlite3_vfs_find(const char *zVfsName);
+
 /* Open and close a connection to a write-ahead log. */
 int sqlite3WalOpen(sqlite3_vfs*, sqlite3_file*, const char *, int, i64, Wal**);
 int sqlite3WalClose(Wal *pWal, sqlite3*, int sync_flags, int, u8 *);
